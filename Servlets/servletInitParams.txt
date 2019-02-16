@@ -1,0 +1,47 @@
+
+ <init-param>
+      <param-name>driverClassName</param-name>
+      <param-value>oracle.jdbc.OracleDriver</param-value>
+ </init-param>
+    <init-param>
+      <param-name>url</param-name>
+      <param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+   </init-param>
+	
+	
+	read above data
+	===================
+	ServletConfig config = getServletConfig();
+	config.getInitParameter("driverClassName");
+
+ <context-param>
+  	<param-name>eno</param-name>
+  	<param-value>101</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>ename</param-name>
+  	<param-value>Surya</param-value>
+  </context-param>
+  
+  ServletContext servletContext = getServletContext();
+  String no = servletContext.getInitParameter("eno");
+  
+  
+  ServletCollaboration
+====================
+
+RequestDispatcher
+  - include(req,res)
+  - forward(req,res)
+  
+  RequestDispatcher rd = request.getRequestDispatcher("/url");
+  rd.include(req,res);
+		(or)
+  rd.forward(req,res);
+  
+sendRedirect
+
+	response.sendRedirect("");
+	//relative- short
+	//absolute - full

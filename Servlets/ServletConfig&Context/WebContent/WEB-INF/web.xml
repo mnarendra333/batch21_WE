@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>ServletConfig&amp;Context</display-name>
+  <welcome-file-list>
+    <welcome-file>home.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>eno</param-name>
+  	<param-value>101</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>ename</param-name>
+  	<param-value>Surya</param-value>
+  </context-param>
+  
+  <servlet>
+    <description></description>
+    <display-name>FirstServlet</display-name>
+    <servlet-name>FirstServlet</servlet-name>
+    <servlet-class>com.pragim.ctrl.FirstServlet</servlet-class>
+    <init-param>
+      <description></description>
+      <param-name>driverClassName</param-name>
+      <param-value>oracle.jdbc.OracleDriver</param-value>
+    </init-param>
+    <init-param>
+      <description></description>
+      <param-name>url</param-name>
+      <param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+    </init-param>
+    <init-param>
+      <description></description>
+      <param-name>username</param-name>
+      <param-value>system</param-value>
+    </init-param>
+    <init-param>
+      <description></description>
+      <param-name>password</param-name>
+      <param-value>system</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FirstServlet</servlet-name>
+    <url-pattern>/fsrv</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SecondServlet</display-name>
+    <servlet-name>SecondServlet</servlet-name>
+    <servlet-class>com.pragim.ctrl.SecondServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SecondServlet</servlet-name>
+    <url-pattern>/ssrv</url-pattern>
+  </servlet-mapping>
+</web-app>
