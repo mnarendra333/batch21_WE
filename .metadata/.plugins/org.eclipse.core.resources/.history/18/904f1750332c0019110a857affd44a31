@@ -1,0 +1,20 @@
+package com.pragim.crud;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class TransactionMgtDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Class.forName("oracle.jdbc.OracleDriver");
+		Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521", "system", "system");
+		
+		
+		
+		
+
+	}
+
+}

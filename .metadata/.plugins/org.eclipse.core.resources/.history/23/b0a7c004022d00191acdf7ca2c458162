@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+	<div>
+	
+			
+		<div>
+			<div>Name</div>
+			<div><input type="text" name="uname"></div>
+		</div>
+		<div>
+			<div>PhoneNo</div>
+			<div><input type="number" name="phno"></div>
+		</div>
+		<div>
+			<div>Gender</div>
+			<div><input type="radio" name="gender" value="male">male
+				 <input type="radio" name="gender" value="female">female
+		</div>
+		<div>
+			<div>Country</div>
+			<div>
+				<select name="country">
+					<option>India</option>
+					<option>China</option>
+					<option>Aus</option>
+					<option>WI</option>
+					<option>Srilanka</option>
+			
+				</select>
+			</div>
+		</div>
+		<div>
+			<div>Hobbies</div>
+			<div>
+				<input type="checkbox" name="hobbies" value="Cricket">Cricket
+				<input type="checkbox" name="hobbies" value="Chess">Chess
+				<input type="checkbox" name="hobbies" value="Football">Football
+				<input type="checkbox" name="hobbies" value="fooseball">fooseball
+			
+			</div>
+		</div>
+		<div>
+			<div>Name</div>
+			<div><input type="text" name="uname"></div>
+		</div>
+		<div>
+			<div>Name</div>
+			<div><input type="text" name="uname"></div>
+		</div>
+	
+	
+	</div>
+
+</body>
+</html>

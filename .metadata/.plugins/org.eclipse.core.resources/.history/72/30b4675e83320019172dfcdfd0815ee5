@@ -1,0 +1,27 @@
+<form action="tsrv">
+
+
+
+	<div>
+	
+			<div>
+				<span>Skill Set</span>
+				<div>
+					<select name="skill">
+					
+						<option>JAVA&J2EE</option>
+						<option>HTML&JS</option>
+						<option>ANGULAR</option>
+						<option>MICROSERVICES</option>
+					</select>
+				
+				</div>
+			</div>
+			<div>
+				<span>exp</span>
+				<div><input type="number" name="exp"></div>
+			</div>
+	
+	</div>
+
+</form>

@@ -1,0 +1,54 @@
+package com.pragim.crud;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class FetchTableDataDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		try {
+			
+			Scanner sc = new Scanner(System.in);
+			Connection connection = ConnectionUtility.getConnectionFromOracle();			
+			Statement pstmt = connection.createStatement();
+			System.out.println("Enter Table name");
+			String tableName = sc.next();
+			
+			
+			ResultSet rs = pstmt.executeQuery("select * from "+tableName);
+			
+			
+			ResultSetMetaData metaData = rs.getMetaData();
+			
+			for (int i = 1; i <=metaData.getColumnCount(); i++) {
+				System.out.print(metaData.getColumnName(i)+"\t");
+			}
+			
+			
+			while (rs.next()) {
+				for (int i = 1; i <=metaData.getColumnCount(); i++) {
+					
+					if(metaData.getColumnTypeName(i).equalsIgnoreCase("NUMBER"))
+						System.out.print(rs.getInt(i));
+					else if(metaData.getColumnTypeName(i).equalsIgnoreCase("VARCHAR2"))
+						System.out.print(rs.getString(i));
+					else if(metaData.getColumnTypeName(i).equalsIgnoreCase("DATE"))
+						System.out.print(rs.getDate(i));
+				}
+				System.out.println();
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+	}
+
+}

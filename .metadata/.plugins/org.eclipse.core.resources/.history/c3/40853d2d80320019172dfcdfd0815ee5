@@ -1,0 +1,14 @@
+<form>
+
+
+
+	<div>
+	
+			<div>
+				<span>Prefered City</span>
+				<div><input type="text" name="city"></div>
+			</div>
+	
+	</div>
+
+</form>

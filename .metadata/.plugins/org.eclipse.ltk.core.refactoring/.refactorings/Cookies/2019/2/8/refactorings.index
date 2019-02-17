@@ -1,0 +1,5 @@
+1550383471443	Extract local variable 'entrySet'
+1550383805211	Extract local variable 'cookies'
+1550385687534	Delete element
+1550385714354	Move 'form3.html' to 'WebContent'
+1550385898546	Copy file

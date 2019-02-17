@@ -1,0 +1,6 @@
+
+<%@include file="header.jsp" %>
+<body>
+
+</body>
+<%@include file="footer.jsp" %>

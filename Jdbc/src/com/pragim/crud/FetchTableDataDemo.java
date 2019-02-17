@@ -16,7 +16,7 @@ public class FetchTableDataDemo {
 			
 			Scanner sc = new Scanner(System.in);
 			connection = ConnectionUtility.getConnectionFromOracle();			
-			Statement pstmt = connection.createStatement();
+			Statement pstmt = connection.prepareStatement("select * from ?");
 			System.out.println("Enter Table name");
 			String tableName = sc.next();
 			

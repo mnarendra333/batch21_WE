@@ -1,0 +1,39 @@
+package com.pragim.crud;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.util.Scanner;
+
+public class FetchTableDataDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		try {
+			
+			Scanner sc = new Scanner(System.in);
+			Connection connection = ConnectionUtility.getConnectionFromOracle();			
+			PreparedStatement pstmt = connection.prepareStatement("select * from ?");
+			System.out.println("Enter Table name");
+			String tableName = sc.next();
+			
+			pstmt.setString(1, tableName);
+			ResultSet rs = pstmt.executeQuery();
+			
+			
+			ResultSetMetaData metaData = rs.getMetaData();
+			
+			for (int i = 1; i <=metaData.getColumnCount(); i++) {
+				System.out.println(metaData.getColumnName(i));
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

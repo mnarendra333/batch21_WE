@@ -1,0 +1,81 @@
+package pack1;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+import com.pragim.crud.ConnectionUtility;
+
+/**
+ * Servlet implementation class RegServlet
+ */
+public class RegServlet extends GenericServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see GenericServlet#GenericServlet()
+     */
+    public RegServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see Servlet#service(ServletRequest request, ServletResponse response)
+	 */
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		
+			String name = request.getParameter("uname");
+			
+			String dob = request.getParameter("dob");
+			String phno = request.getParameter("phno");
+			String gen = request.getParameter("gender");
+			String country = request.getParameter("country");
+			String[] hobbies = request.getParameterValues("hobbies");
+			
+			StringBuffer sb = new StringBuffer();
+			if(hobbies.length>0){
+				for (String string : hobbies) {
+					sb.append(string).append(",");
+				}
+			}
+			String hobList = sb.toString().replaceAll(",$", "");
+			String address = request.getParameter("addr");
+			
+			
+			
+			SimpleDateFormat sdf =new SimpleDateFormat("dd-MMM-yy");
+			try {
+				Date parse = sdf.parse(dob);
+				java.sql.Date sql_StartDate = new java.sql.Date( parse.getTime() );
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			
+			Connection connection = ConnectionUtility.getConnectionFromOracle();
+			
+			try {
+				
+				PreparedStatement pstmt = connection.prepareStatement("insert into reg_tab values(reg_seq.nextval,?,?,?,?,?,?,?)");
+				pstmt.setString(1, name);
+				pstmt.setDate(2	,sql_StartDate);
+				pstmt.setString(3, gen);
+				pstmt.setString(4, country);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			
+		
+		
+	}
+
+}

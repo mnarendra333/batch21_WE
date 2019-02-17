@@ -1,0 +1,15 @@
+package com.pragim.crud;
+
+public class BatchDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		//step1
+		
+		Class.forName("oracle.jdbc.OracleDriver");
+
+	}
+
+}

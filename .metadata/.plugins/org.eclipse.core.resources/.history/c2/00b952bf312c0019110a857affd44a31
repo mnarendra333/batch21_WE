@@ -1,0 +1,27 @@
+package com.pragim.crud;
+
+import java.sql.DriverManager;
+
+public class BatchDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		//step1
+		
+		try {
+			
+			
+			Class.forName("oracle.jdbc.OracleDriver");
+			DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521", user, password)
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

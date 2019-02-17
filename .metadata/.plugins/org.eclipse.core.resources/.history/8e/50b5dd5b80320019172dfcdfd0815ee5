@@ -1,0 +1,18 @@
+<form>
+
+
+
+	<div>
+	
+			<div>
+				<span>Skill Set</span>
+				<div><input type="text" name="city"></div>
+			</div>
+			<div>
+				<span>exp</span>
+				<div><input type="number" name="sal"></div>
+			</div>
+	
+	</div>
+
+</form>

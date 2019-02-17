@@ -1,0 +1,36 @@
+package com.pragim.crud;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class TransactionMgtDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521", "system", "system");
+			
+			//step-1
+			connection.setAutoCommit(false);
+			Statement stmt1 = connection.createStatement();
+			int executeUpdate = stmt1.executeUpdate("insert into emp values(7,'barath')");
+			System.out.println(executeUpdate+" rows effected");
+			Statement stmt2 = connection.createStatement();
+			int executeUpdate2 = stmt2.executeUpdate("update emp set name='rajkumar' where id=4");
+			
+			Statement stmt3 = connection.createStatement();
+			stmt3.executeUpdate("delete from emp4 where id=7");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+
+	}
+
+}

@@ -1,0 +1,37 @@
+package com.pragim.crud;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class BatchDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		//step1
+		
+		try {
+			
+			
+			Class.forName("oracle.jdbc.OracleDriver");
+			Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521", "system", "system");
+			
+			
+			Statement stmt1 = connection.createStatement();
+			stmt1.addBatch("insert into emp values(3,'ravi')");
+			stmt1.addBatch("update emp set name='kamal' where id=1");
+			stmt1.addBatch("delete from emp where id=2");
+			
+			
+			int[] executeBatch = stmt1.executeBatch();
+			System.out.println(executeBatch[0]+" "+executeBatch[1]+" "+executeBatch[2]);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

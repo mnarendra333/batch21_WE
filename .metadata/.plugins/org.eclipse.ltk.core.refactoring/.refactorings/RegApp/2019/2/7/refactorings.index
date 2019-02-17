@@ -1,0 +1,11 @@
+1549783771579	Extract local variable 'parameter'
+1549783832189	Extract local variable 'parameter2'
+1549783981297	Extract local variable 'connectionFromOracle'
+1549784290693	Extract local variable 'prepareStatement'
+1549784573486	Extract local variable 'parse'
+1549784886576	Extract local variable 'replaceAll'
+1549785041028	Extract local variable 'executeUpdate'
+1549785060778	Extract local variable 'writer'
+1549785585138	Copy file
+1549785695009	Delete elements
+1549785710215	Delete element
