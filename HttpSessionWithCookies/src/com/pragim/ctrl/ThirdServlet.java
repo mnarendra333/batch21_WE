@@ -54,6 +54,8 @@ public class ThirdServlet extends HttpServlet {
 		out.println("form3 data is "+map3);
 		
 		
+		session.invalidate();
+		
 		
 	}
 

@@ -33,6 +33,7 @@ public class FirstServlet extends HttpServlet {
 		
 			Map<String, String[]> parameterMap = request.getParameterMap();
 			
+			HttpSession exsSession = request.getSession(false);
 			HttpSession session = request.getSession();
 			session.setAttribute("form1", parameterMap.toString());
 			
