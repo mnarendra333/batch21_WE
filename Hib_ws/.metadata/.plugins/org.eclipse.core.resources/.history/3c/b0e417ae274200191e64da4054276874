@@ -1,0 +1,13 @@
+package com.pragim.model;
+
+public class Product {
+	
+	
+	private int proId;
+	private String proName;
+	private double price;
+	
+	
+	
+
+}

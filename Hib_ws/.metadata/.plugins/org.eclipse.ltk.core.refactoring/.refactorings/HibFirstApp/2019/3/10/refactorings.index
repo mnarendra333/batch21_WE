@@ -1,0 +1,6 @@
+1552109705677	Extract local variable 'buildSessionFactory'
+1552109770771	Extract local variable 'openSession'
+1552109952458	Extract local variable 'beginTransaction'
+1552111021361	Rename resource 'hib.cfg.xml'
+1552111034966	Extract local variable 'buildSessionFactory'
+1552111047074	Extract local variable 'openSession'
