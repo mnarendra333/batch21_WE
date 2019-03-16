@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+        
+<hibernate-mapping>
+
+	<class name="pack1.Vendor">
+	
+		<id name="venId">
+			<generator class="sequence">
+				<param name="sequence">ven_seq</param>
+			</generator>
+		</id>
+		
+		<property name="venName" length="30"/>
+		
+		<set name="custList" cascade="all-delete-orphan">
+			<key column="ven_id"></key>
+			<one-to-many class="pack1.Customer"/>
+		</set>
+	</class>
+	
+	<class name="pack1.Customer">
+	
+		<id name="custId">
+		
+			<generator class="sequence">
+				<param name="sequence">cust_seq</param>
+			</generator>
+		</id>
+		
+		<property name="custName" length="30"/>
+		<property name="addr" length="30"/>
+	</class>
+
+
+
+</hibernate-mapping>
