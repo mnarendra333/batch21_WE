@@ -1,5 +1,7 @@
 package com.pragim.model;
 
+import org.hibernate.annotations.Cache;
+
 public class Product {
 
 	@Override
@@ -8,6 +10,7 @@ public class Product {
 				+ price + "]";
 	}
 
+	
 	private int proId;
 	private String proName;
 	private double price;

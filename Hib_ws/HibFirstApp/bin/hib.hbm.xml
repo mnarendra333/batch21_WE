@@ -7,8 +7,10 @@
 <hibernate-mapping>
 
 
+	
 	<class name="com.pragim.model.Product" table="product_table">
 	
+		<cache usage="read-only"/>
 		<id name="proId" column="pro_id">
 			<generator class="sequence">
 				<param name="sequence">pro001_seq</param>

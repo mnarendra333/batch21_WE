@@ -15,16 +15,12 @@
 	
 		<!-- hibernate props -->
 		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
 		<property name="show_sql">true</property>
 		
-		
-		<property name="hibernate.cache.region.factory_class">
-		org.hibernate.cache.ehcache.EhCacheRegionFactory
-		</property>
-		
 		<!-- mapping resources -->
-		<mapping resource="hib.hbm.xml"/>
+		<mapping class="com.pragim.onetomanywithannotations.model.Vendor"/>
+		<mapping class="com.pragim.onetomanywithannotations.model.Customer"/>
 	</session-factory>
 
 

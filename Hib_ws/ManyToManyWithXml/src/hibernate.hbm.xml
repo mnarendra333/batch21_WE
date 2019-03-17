@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+        
+<hibernate-mapping>
+
+	<class name="pack1.Student">
+	
+		<id name="stuId">
+			<generator class="sequence">
+				<param name="sequence">student_seq</param>
+			</generator>
+		</id>
+		
+		<property name="stuName" length="30"/>
+		<property name="marks"/>
+		
+		<set name="courseList" cascade="all" table="student_course">
+			<key column="student_id"></key>
+			<many-to-many class="pack1.Course" column="course_Id"/>
+		</set>
+	</class>
+	
+	<class name="pack1.Course">
+	
+		<id name="courseId">
+			<generator class="sequence">
+				<param name="sequence">student_seq</param>
+			</generator>
+		</id>
+		
+		<property name="courseName" length="30"/>
+		<property name="duration"/>
+		
+		<set name="stuList" cascade="all" table="student_course">
+			<key column="course_Id"></key>
+			<many-to-many class="pack1.Student" column="student_id"/>
+		</set>
+	</class>
+
+
+
+</hibernate-mapping>

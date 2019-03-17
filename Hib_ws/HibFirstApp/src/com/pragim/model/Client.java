@@ -14,7 +14,7 @@ public class Client {
 		//step-1
 		
 		Configuration config = new Configuration();
-		config.configure("hib.cfg.xml");
+		config.configure("hibernate.cfg.xml");
 		SessionFactory factory = config.buildSessionFactory();
 		
 		//step-2 ######## creating session ####### enable local cache
