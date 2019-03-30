@@ -1,0 +1,5 @@
+package com.pragim.SpringDIWthPremetive;
+
+public class HelloWorldBean {
+
+}

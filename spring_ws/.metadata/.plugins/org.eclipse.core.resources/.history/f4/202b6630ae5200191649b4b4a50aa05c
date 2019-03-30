@@ -1,0 +1,12 @@
+package com.pragim.SpringDIWthPremetive;
+
+public class HelloWorldBean {
+	
+	private String message = "helo";
+	
+	
+	public void setMessage(String message){
+		this.message = message;
+	}
+
+}

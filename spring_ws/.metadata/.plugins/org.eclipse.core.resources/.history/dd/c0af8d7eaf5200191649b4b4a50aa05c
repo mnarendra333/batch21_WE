@@ -1,0 +1,22 @@
+package com.pragim.SpringDIWthPremetive;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        
+    	
+    	Resource res = new ClassPathResource("spring-beans.xml");
+    	BeanFactory factory =
+    	
+    	
+    }
+}

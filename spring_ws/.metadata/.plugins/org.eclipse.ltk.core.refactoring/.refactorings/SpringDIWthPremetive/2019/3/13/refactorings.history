@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;bean&apos; from expression &apos;factory.getBean(&quot;id1&quot;,HelloWorldBean.class)&apos;&#x0D;&#x0A;- Original project: &apos;SpringDIWthPremetive&apos;&#x0D;&#x0A;- Variable name: &apos;bean&apos;&#x0D;&#x0A;- Destination method: &apos;com.pragim.SpringDIWthPremetive.App.main()&apos;&#x0D;&#x0A;- Variable expression: &apos;factory.getBean(&quot;id1&quot;,HelloWorldBean.class)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;bean&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java&lt;com.pragim.SpringDIWthPremetive{App.java" name="bean" replace="true" selection="490 44" stamp="1553925029488" version="1.0"/>
+</session>
