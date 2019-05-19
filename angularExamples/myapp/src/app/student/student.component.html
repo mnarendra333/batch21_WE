@@ -1,0 +1,13 @@
+<p>
+  student works!
+</p>
+
+<table class="table table-hover">
+<tr *ngFor="let item of list; index as i; trackBy: trackByFn">
+
+      <td>{{item.stuId}}</td>
+      <td>{{item.stuName}}</td>
+      <td>{{item.marks}}</td>
+
+</tr>
+</table>
